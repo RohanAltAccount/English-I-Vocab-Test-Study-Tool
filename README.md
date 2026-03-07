@@ -5,3 +5,5 @@ This is a small project written in HTML that helps you study a vocab list.
 - OpenAI API key
 - GitHub app
 - my iPhone
+## How To Use
+Paste your list of vocabulary words into the textbox. It will be analyzed and a practice quiz will be generated for you.
