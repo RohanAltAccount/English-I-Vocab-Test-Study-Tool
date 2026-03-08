@@ -1,6 +1,6 @@
 # English I Vocab Test Study Tool
 ## Description:
-This is a small project written in HTML that helps you study a vocab list.
+This is a small project written in HTML that helps you study a vocab list (preferably new words, but can work with any completely list of vocabulary you want to learn).
 ## Stuff I Used
 - OpenAI API key
 - GitHub app
