@@ -24,7 +24,7 @@ button {
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    transition: all 0.25s ease-in-out;
 }
 
 
