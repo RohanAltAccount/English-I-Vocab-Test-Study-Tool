@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang ="en">
 <html>
 <head>
   <title>Vocab Study Tool</title>
@@ -15,8 +16,11 @@
     This is a study tool that uses OpenAI API to analyze your pasted text (in the form of a vocab list of some sort) and turns it into a set of fill-in-the-blank practice questions.
     </b>
 </p>
+<form>
 <label for="vocabList">Paste your words:</label>
-<input type="text" id="vocabList" name="words">
+<textarea id="vocabList" name="words" rows="10" cols="50"></textarea>
+<button type="submit">Practice</button>
+</form>
 
 </body>
 </html>
