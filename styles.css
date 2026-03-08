@@ -24,11 +24,11 @@ button {
     border-radius: 30px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.4s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 
 button:hover {
     background-color: #595959;
-    transform: skew(5deg,5deg);
+    border-radius: 15px;
 }
