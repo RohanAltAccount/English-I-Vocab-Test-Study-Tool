@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang ="en">
-<html>
+<html lang="en">
 <head>
 <title>Vocab Study Tool</title>
 <meta charset = "UTF-8">
@@ -20,8 +19,16 @@
 <form>
 <label for="vocabList">Paste your words:</label>
 <textarea id="vocabList" name="words" rows="10" cols="50"></textarea>
-<button type="submit">Practice</button>
+<button type="submit" id="b1">Practice</button>
+
 </form>
-      <script src="script.js"></script>
+<p id="output"></p>
+<script type="module">
+import Openai from "https://cdn.skypack.dev/openai@3.1.0";
+const client = new Openai({
+  apiKey: "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"
+});
+</script>
+<script src="script.js"></script>
 </body>
 </html>
