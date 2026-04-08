@@ -19,16 +19,34 @@
 <form>
 <label for="vocabList">Paste your words:</label>
 <textarea id="vocabList" name="words" rows="10" cols="50"></textarea>
-<button type="submit" id="b1">Practice</button>
-
+<button type="submit" id="b1">Generate</button>
 </form>
 <p id="output"></p>
 <script type="module">
-import Openai from "https://cdn.skypack.dev/openai@3.1.0";
-const client = new Openai({
-  apiKey: "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"
+import OpenAI from "https://cdn.skypack.dev/openai";
+const client = new OpenAI({
+  apiKey: "sk-...", 
+  dangerouslyAllowBrowser: true
+});
+const form = document.querySelector("form");
+const textarea = document.getElementById("vocabList");
+const output = document.getElementById("output");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const text = textarea.value.trim();
+  if (!text) return;
+
+  output.innerText = "Generating...";
+  try {
+    const res = await client.responses.create({
+      model: "gpt-5.3",
+      input: `Turn this vocab list into fill-in-the-blank practice questions:\n${text}`,
+    });    output.innerText = res.output[0].content[0].text;   } catch (err) {
+    console.error(err);
+    output.innerText = "Error generating response";
+  }
 });
 </script>
-<script src="script.js"></script>
 </body>
 </html>
